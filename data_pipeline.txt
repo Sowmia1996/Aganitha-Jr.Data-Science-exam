@@ -1,0 +1,19 @@
+Aim :
+To address the needs as specified in the question, we apply machine-learning techniques to predict the outcomes of randomized clinical trials.
+Before moving on to modelling let us build a data pipeline to cleanse, impute missing values and pre-process the data.
+
+
+Dealing with missing data:
+Deleting all observations with any missing factors greatly reduces the amount of data available and decreases the statistical power of the resulting statistics.Furthermore, listwise deletion is valid only under strict and unrealistic assumptions (see below), and when such conditions are violated, inferences are biased.So we make effort to impute for missing data.
+Prior to the 2007 FDA Amendments Act (FDAAA), it was not uncommon for investigators to release only partial information about pipeline drugs and clinical trials to protect trade secrets or simply because there was no incentive to do more. Even today, some investigators still do not adhere to the FDAAA-mandated registration policy or submit adequate registrations. Therefore, all historical drug development databases have missing data
+We note that the “missingness” here is largely related to the post-study reporting of clinical trial data as opposed to in-trial data missingness (e.g., censorship of panel data due to patients terminating trial participation prematurely). In the former case, the data (e.g., trial duration, trial outcomes) are usually available to the investigators but may not be released publicly, and are thus considered “missing” from our standpoint. Therefore, our dataset may be considered an approximation of the actual data available to the FDA and individual drug developers.
+
+
+Types of missing data:
+i)missing completely at random(missing for reasons entirely independent of the data)
+ii)missing at random ( missingness can be fully accounted for by the observed variables)
+iii)missing not-at-random (when neither MCAR nor MAR is appropriate)
+
+Assumption :
+we impute the missing data under the  assumption missing-at-random to obtain complete datasets.
+
